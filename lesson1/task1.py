@@ -1,22 +1,22 @@
 # int
-a = -20
-b = 20
-c = a + b
-print(a, b, c)
-
-a = 6467325236
-b = 123
-c = a/b
-print(type(c))
-
-# floating
-a = 1.2
-b = 3.4
-c = a - b
-print(c)
-
-# get number
-a = input('Введите число')
-b = input('Еще')
-print('Введите число','Еще')
-
+num_1 = 60
+num_2 = 30
+print(num_1-num_2)
+print(num_1*num_2)
+print(num_1/num_2)
+print(num_1+num_2)
+print(num_1//num_2)
+print(num_1 % num_2)
+# Float
+num_1 = 77.12
+num_2 = 31.03
+print(num_1**num_2)
+# вывод данных
+name = input('Введите ваше имя - ')
+name_2 = input('Введите ваш возраст - ')
+name = str(name)
+name_2 = str(name_2)
+print('Имя - ', name, 'Возраст -', name_2)
+# str
+Text = 'Good morning!'
+Text_2 = 'Приятно познакомиться'

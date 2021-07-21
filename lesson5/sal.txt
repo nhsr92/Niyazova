@@ -1,0 +1,4 @@
+Lapshin 12000
+Petrov 30000
+Ivanov 25000
+Vasilev 11511

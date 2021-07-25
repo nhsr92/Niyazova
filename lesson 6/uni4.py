@@ -22,12 +22,9 @@ class Car:
 
 
 class TownCar(Car):
-    def __init__(self, speed, color, name, is_police):
-        super().__init__(speed, color, name, is_police)
 
     def show_speed(self):
         print(f'Текущая скорость городского автомобиля {self.name} - {self.speed}')
-
         if self.speed > 40:
             return f'Скорость {self.name} выше положенного для городского авто!'
         else:
@@ -35,19 +32,14 @@ class TownCar(Car):
 
 
 class SportCar(Car):
-    def __init__(self, speed, color, name, is_police):
-        super().__init__(speed, color, name, is_police)
+    """Спортивная машина"""
 
 
 class WorkCar(Car):
-    def __init__(self, speed, color, name, is_police):
-        super().__init__(speed, color, name, is_police)
-
     def show_speed(self):
         print(f'Текущая скорость рабочей машины {self.name} составляет - {self.speed}')
-
         if self.speed > 60:
-            return f'Скорость {self.name} !'
+            return f'Скорость {self.name} превышенна!'
 
 
 class PoliceCar(Car):
@@ -63,15 +55,16 @@ class PoliceCar(Car):
 
 Porsche = SportCar(100, 'Красный', 'Porsche', False)
 Volvo = TownCar(30, 'Серый', 'Volvo', False)
-Renault = WorkCar(70, 'Белый', 'Renault', True)
+Renault = WorkCar(90, 'Белый', 'Renault', True)
 Hyundai = PoliceCar(100, 'Синий', 'Hyundai', True)
-print(f'Автомобиль {Renault.turn_left()}')
-print(f'Если {Volvo.turn_right()}, то {Porsche.stop()}')
-print(f'{Renault.go()} со скоростью: {Renault.show_speed()}')
+print(f'Автомобиль {Renault.name} рабочая машина')
 print(f' Цвет {Renault.name} - {Renault.color}')
-print(f'{Porsche.name} полицейская машина? Нет это не так!')
-print(f'{Hyundai.name} полицейская машина? Да, верно!')
+print(Renault.show_speed())
+print(f' Цвет {Porsche.name} - {Porsche.color}')
+print(f'Автомобиль {Porsche.name} - спортивная машина')
 print(Porsche.show_speed())
+print(f' Цвет {Volvo.name} - {Volvo.color}')
 print(Volvo.show_speed())
+print(f' Цвет {Hyundai.name} - {Hyundai.color}')
 print(Hyundai.police())
 print(Hyundai.show_speed())
